@@ -1,0 +1,28 @@
+#logo {
+  width: 50%;
+}
+
+.color_1 {
+  /* CYAN */ 
+  fill:#00aeef; 
+  opacity:.75;
+}
+
+.color_2 {
+  /* MAGENTA */ 
+  fill:#ec008c;
+  opacity:.75;
+}
+
+.color_3 {
+  /* YELLOW */ 
+  fill:#fff200;
+  opacity:.75;
+}
+
+.color_4 {
+  /* BLACK */
+  fill:#231f20;
+  opacity:.75;
+}
+
