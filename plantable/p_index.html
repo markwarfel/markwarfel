@@ -163,8 +163,7 @@
             reqiured />
             <input type="hidden" name="_next" value="https://markwarfel.github.io/plantable/p_confirm.html">
             <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="returnEmail">
-            <input type="hidden" name="_subject" value="returnEmail">
+            <input id="subject" type="hidden" name="_subject" value="subject">
             <button onclick="getEmail()" type="submit" class="btn btn-primary join-item">Subscribe</button>
         </div>
         </fieldset>
@@ -178,8 +177,9 @@
 </div>
 <script>
     function getEmail() {
-      var email = document.getElementById("userEmail").value;
-      document.getElementByValue("returnEmail").innerHTML = email;
+        var userEmail = document.getElementById("userEmail").value;
+        document.getElementById("subject").setAttribute("value", userEmail);
+        console.log(userEmail);
     }
 </script>
 </body>
