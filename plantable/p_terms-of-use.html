@@ -126,7 +126,7 @@
         <a class="link link-hover" href="/plantable/p_privacy-policy.html">Privacy policy</a>
         <a class="link link-hover" href="/plantable/p_cookie-policy.html">Cookie policy</a>
     </nav>
-    <form class="mt-12" id="newsletter">
+    <form class="mt-12" id="newsletter" action="https://formsubmit.co/hello@plantable.io" method="POST">
         <h6 class="footer-title">Newsletter</h6>
         <fieldset class="form-control w-80">
         <label class="label">
@@ -134,10 +134,16 @@
         </label>
         <div class="join">
             <input
-            type="text"
+            id="userEmail"
+            type="email"
+            name="email"
             placeholder="Email"
-            class="input input-bordered join-item" />
-            <button class="btn btn-primary join-item">Subscribe</button>
+            class="input input-bordered join-item" 
+            reqiured />
+            <input type="hidden" name="_next" value="https://markwarfel.github.io/plantable/p_confirm.html">
+            <input type="hidden" name="_captcha" value="false">
+            <input id="subject" type="hidden" name="_subject" value="subject">
+            <button onmousedown="getEmail()" type="submit" class="btn btn-primary join-item">Subscribe</button>
         </div>
         </fieldset>
     </form>
@@ -147,6 +153,13 @@
 <div class="footer footer-center p-4 mt-10 text-neutral-400">  
     <p>Copyright © 2024 - All right reserved by Plantable</p>
 </div>
-        </div>
-    </body>
+</div>
+<script>
+    function getEmail() {
+        var userEmail = document.getElementById("userEmail").value;
+        document.getElementById("subject").setAttribute("value", userEmail);
+        console.log(userEmail);
+    }
+</script>
+</body>
 </html>

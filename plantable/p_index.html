@@ -76,10 +76,10 @@
                     <input type="email" name="email" class="grow border-none" placeholder="Email" reqiured/>
                     <input type="hidden" name="_next" value="https://markwarfel.github.io/plantable/p_confirm.html">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_subject" value="returnEmail">
+                    <input id="subject" type="hidden" name="_subject" value="subject">
                 </label>
                 <div class="w-72 mx-auto mt-4">
-                    <button type="submit" class="btn btn-primary w-full ">Join The Waitlist</button>
+                    <button onmousedown="getEmail()" type="submit" class="btn btn-primary w-full ">Join The Waitlist</button>
                 </div>
             </form>
         </div>
@@ -165,7 +165,7 @@
             <input type="hidden" name="_next" value="https://markwarfel.github.io/plantable/p_confirm.html">
             <input type="hidden" name="_captcha" value="false">
             <input id="subject" type="hidden" name="_subject" value="subject">
-            <button onclick="getEmail()" type="submit" class="btn btn-primary join-item">Subscribe</button>
+            <button onmousedown="getEmail()" type="submit" class="btn btn-primary join-item">Subscribe</button>
         </div>
         </fieldset>
     </form>
