@@ -6,6 +6,7 @@
 
     <head>
         <meta charset="utf-8">
+        <script defer src="https://cloud.umami.is/script.js" data-website-id="8d66f381-a4c3-48a0-9965-da42086cb740"></script>
         
 
 <link rel="stylesheet" href="p_styles.css">
@@ -162,7 +163,7 @@
         </label>
         <div class="join">
             <input
-            id="userEmail"
+            id="userEmail2"
             type="email"
             name="email"
             placeholder="Email"
@@ -170,8 +171,8 @@
             required />
             <input type="hidden" name="_next" value="https://markwarfel.github.io/plantable/p_confirm.html">
             <input type="hidden" name="_captcha" value="false">
-            <input id="subject" type="hidden" name="_subject" value="subject">
-            <button onmousedown="getEmail()" type="submit" class="btn btn-primary join-item">Subscribe</button>
+            <input id="subject2" type="hidden" name="_subject" value="subject">
+            <button onmousedown="getEmail2()" type="submit" class="btn btn-primary join-item">Subscribe</button>
         </div>
         </fieldset>
     </form>
@@ -187,6 +188,11 @@
         var userEmail = document.getElementById("userEmail").value;
         document.getElementById("subject").setAttribute("value", userEmail);
         console.log(userEmail);
+    }
+    function getEmail2() {
+        var userEmail2 = document.getElementById("userEmail").value;
+        document.getElementById("subject2").setAttribute("value", userEmail2);
+        console.log(userEmail2);
     }
 </script>
 </body>
