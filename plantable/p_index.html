@@ -155,6 +155,7 @@
         </label>
         <div class="join">
             <input
+            id="userEmail"
             type="email"
             name="email"
             placeholder="Email"
@@ -162,7 +163,8 @@
             reqiured />
             <input type="hidden" name="_next" value="https://markwarfel.github.io/plantable/p_confirm.html">
             <input type="hidden" name="_captcha" value="false">
-            <button type="submit" class="btn btn-primary join-item">Subscribe</button>
+            <input type="hidden" name="_subject" value="returnEmail">
+            <button onclick="getEmail()" type="submit" class="btn btn-primary join-item">Subscribe</button>
         </div>
         </fieldset>
     </form>
@@ -173,5 +175,11 @@
     <p>Copyright © 2024 - All right reserved by Plantable</p>
 </div>
 </div>
+<script>
+    function getEmail() {
+      var email = document.getElementById("userEmail").value;
+      document.getElementByValue("returnEmail").innerHTML = email;
+    }
+</script>
 </body>
 </html>
