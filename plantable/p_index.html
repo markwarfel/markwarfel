@@ -60,13 +60,8 @@
             <p>Whether you’re designing a residential garden, public park, or corporate campus, our platform gives you the insights and flexibility to make informed, sustainable choices.</p>
         </div>
         <div class="w-72 mx-auto mt-14">
+            
             <form action="https://formsubmit.co/hello@plantable.io" method="POST">
-                <input type="email" name="email" required>
-                <input type="hidden" name="_next" value="https://markwarfel.github.io/plantable/p_confirm.html">
-                <input type="hidden" name="_captcha" value="false">
-                <button type="submit">Send</button>
-            </form>
-            <form>
                 <label class="input input-bordered flex items-center">
                     <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -79,6 +74,8 @@
                         d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
                     </svg>
                     <input type="email" name="email" class="grow border-none" placeholder="Email" reqiured/>
+                    <input type="hidden" name="_next" value="https://markwarfel.github.io/plantable/p_confirm.html">
+                    <input type="hidden" name="_captcha" value="false">
                 </label>
                 <div class="w-72 mx-auto mt-4">
                     <button type="submit" class="btn btn-primary w-full ">Join The Waitlist</button>
@@ -150,7 +147,7 @@
         <a class="link link-hover" href="/plantable/p_privacy-policy.html">Privacy policy</a>
         <a class="link link-hover" href="/plantable/p_cookie-policy.html">Cookie policy</a>
     </nav>
-    <form class="mt-12" id="newsletter">
+    <form class="mt-12" id="newsletter" action="https://formsubmit.co/hello@plantable.io" method="POST">
         <h6 class="footer-title">Newsletter</h6>
         <fieldset class="form-control w-80">
         <label class="label">
@@ -158,10 +155,14 @@
         </label>
         <div class="join">
             <input
-            type="text"
+            type="email"
+            name="email"
             placeholder="Email"
-            class="input input-bordered join-item" />
-            <button class="btn btn-primary join-item">Subscribe</button>
+            class="input input-bordered join-item" 
+            reqiured />
+            <input type="hidden" name="_next" value="https://markwarfel.github.io/plantable/p_confirm.html">
+            <input type="hidden" name="_captcha" value="false">
+            <button type="submit" class="btn btn-primary join-item">Subscribe</button>
         </div>
         </fieldset>
     </form>
