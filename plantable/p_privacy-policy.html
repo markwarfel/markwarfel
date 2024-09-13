@@ -128,7 +128,7 @@
         </label>
         <div class="join">
             <input
-            id="userEmail"
+            id="userEmail2"
             type="email"
             name="email"
             placeholder="Email"
@@ -136,8 +136,8 @@
             required />
             <input type="hidden" name="_next" value="https://markwarfel.github.io/plantable/p_confirm.html">
             <input type="hidden" name="_captcha" value="false">
-            <input id="subject" type="hidden" name="_subject" value="subject">
-            <button onmousedown="getEmail()" type="submit" class="btn btn-primary join-item">Subscribe</button>
+            <input id="subject2" type="hidden" name="_subject" value="subject">
+            <button onmousedown="getEmail2()" type="submit" class="btn btn-primary join-item">Subscribe</button>
         </div>
         </fieldset>
     </form>
@@ -152,7 +152,10 @@
     function getEmail() {
         var userEmail = document.getElementById("userEmail").value;
         document.getElementById("subject").setAttribute("value", userEmail);
-        console.log(userEmail);
+    }
+    function getEmail2() {
+        var userEmail2 = document.getElementById("userEmail2").value;
+        document.getElementById("subject2").setAttribute("value", userEmail2);
     }
 </script>
 </body>
